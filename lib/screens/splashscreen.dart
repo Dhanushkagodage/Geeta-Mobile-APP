@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:geeta_app/screens/homescreen.dart';
 
 class Splashscreen extends StatelessWidget {
   const Splashscreen({super.key});
@@ -47,21 +48,32 @@ class Splashscreen extends StatelessWidget {
                       fontSize: 14.sp,
                       color: Colors.black)),
               SizedBox(height: 40.sp),
-              Container(
-                height: 54.sp,
-                width: 222.sp,
-                decoration: BoxDecoration(
-                    border: Border.all(color: Colors.black),
-                    borderRadius: BorderRadius.circular(56.r)),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text("LOG IN",
-                        style: TextStyle(
-                            fontFamily: "Lato",
-                            fontSize: 11.sp,
-                            color: Colors.black)),
-                  ],
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    // ignore: use_build_context_synchronously
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const Homescreen(),
+                    ),
+                  );
+                },
+                child: Container(
+                  height: 54.sp,
+                  width: 222.sp,
+                  decoration: BoxDecoration(
+                      border: Border.all(color: Colors.black),
+                      borderRadius: BorderRadius.circular(56.r)),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text("LOG IN",
+                          style: TextStyle(
+                              fontFamily: "Lato",
+                              fontSize: 11.sp,
+                              color: Colors.black)),
+                    ],
+                  ),
                 ),
               ),
               Padding(
@@ -95,21 +107,32 @@ class Splashscreen extends StatelessWidget {
                   ],
                 ),
               ),
-              Container(
-                height: 54.sp,
-                width: 222.sp,
-                decoration: BoxDecoration(
-                    color: Color(0xFF6342E8),
-                    borderRadius: BorderRadius.circular(56.r)),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text("REGISTER",
-                        style: TextStyle(
-                            fontFamily: "Lato",
-                            fontSize: 11.sp,
-                            color: Colors.white)),
-                  ],
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    // ignore: use_build_context_synchronously
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const Homescreen(),
+                    ),
+                  );
+                },
+                child: Container(
+                  height: 54.sp,
+                  width: 222.sp,
+                  decoration: BoxDecoration(
+                      color: const Color(0xFF6342E8),
+                      borderRadius: BorderRadius.circular(56.r)),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text("REGISTER",
+                          style: TextStyle(
+                              fontFamily: "Lato",
+                              fontSize: 11.sp,
+                              color: Colors.white)),
+                    ],
+                  ),
                 ),
               ),
             ],
