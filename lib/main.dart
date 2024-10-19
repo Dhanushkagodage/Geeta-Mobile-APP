@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:geeta_app/screens/loading.dart';
+import 'package:geeta_app/screens/loadingscreen.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       builder: (context, _) => const MaterialApp(
         debugShowCheckedModeBanner: false,
         title: "GEETA_APP",
-        home: Loading(),
+        home: LoadingScreen(),
       ),
       designSize: const Size(412, 732),
     );
