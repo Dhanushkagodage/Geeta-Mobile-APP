@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:geeta_app/screens/cartscreen.dart';
 import 'package:geeta_app/widgets/resourcecard.dart';
 
 class Buyscreen extends StatefulWidget {
@@ -245,7 +246,14 @@ class _BuyscreenState extends State<Buyscreen> {
                   ),
                   SizedBox(height: 20.sp),
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const CartScreen(),
+                        ),
+                      );
+                    },
                     child: Container(
                       height: 54.sp,
                       width: double.infinity,

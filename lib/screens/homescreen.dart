@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:geeta_app/screens/cartscreen.dart';
 import 'package:geeta_app/widgets/resourcecard.dart';
 
 class Homescreen extends StatefulWidget {
@@ -38,7 +39,14 @@ class _HomescreenState extends State<Homescreen> {
           Padding(
             padding: EdgeInsets.only(right: 20.sp),
             child: IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const CartScreen(),
+                        ),
+                      );
+                },
                 icon: const Icon(Icons.card_travel_outlined)),
           ),
         ],
